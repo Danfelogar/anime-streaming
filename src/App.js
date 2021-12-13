@@ -1,8 +1,9 @@
+import { AppRouter } from "./routers/AppRouter";
 
 function App() {
   return (
     <div>
-      App de anime movile
+      <AppRouter/>
     </div>
   );
 }
