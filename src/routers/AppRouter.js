@@ -14,21 +14,27 @@ import { NavbarScreen } from "../components/Navbar/NavbarScreen";
 
 export const AppRouter = () => {
     return (
-        <Router>
-            <DrawerScreen/>
-            <NavbarScreen/>
-            <Switch>
-                <Route exact path="/">
-                    <AnimeScreen/>
-                </Route>
-                <Route exact path="/favoritesList">
-                    <FavoritesAnime/>
-                </Route>
-                <Route path="/id" >
-                    <DetailAnimeScreen/>
-                </Route>
-                <Redirect to="/" />
-            </Switch>
-        </Router>
+        <div>
+            <Router>
+                <div className="main_wrapper">
+                    <DrawerScreen/>
+                    <div className="streaming_wrapper">
+                        <NavbarScreen/>
+                        <Switch>
+                            <Route exact path="/">
+                                <AnimeScreen/>
+                            </Route>
+                            <Route exact path="/favoritesList">
+                                <FavoritesAnime/>
+                            </Route>
+                            <Route path="/id" >
+                                <DetailAnimeScreen/>
+                            </Route>
+                            <Redirect to="/" />
+                        </Switch>
+                    </div>
+                </div>
+            </Router>
+        </div>
     )
 }

@@ -1,0 +1,91 @@
+.drawer_wrapper{
+    background-color:$background;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 43%;
+    overflow-y: scroll;
+}
+//primer bloque
+
+.close_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color:$text;
+    font-size: 25px;
+}
+
+//segundo bloque
+
+.main_section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.main_section h2{
+    color:$title;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.main_section h2 span{
+    border-bottom: 1.3px solid $text;
+}
+
+.main_section ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+    color:$title;
+}
+
+.main_section ul li h3{
+    color:$title;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 4px;
+}
+
+//tercer bloque
+
+.genre_section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.genre_section h2{
+    color:$title;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.genre_section h2 span{
+    border-bottom: 1.3px solid $text;
+}
+
+.genre_section ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+    color:$title;
+    font-size: 15px;
+}
+
+.genre_section ul li h3{
+    color:$title;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
