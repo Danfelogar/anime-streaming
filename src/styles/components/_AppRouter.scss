@@ -1,9 +1,13 @@
 .main_wrapper{
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
+    // position: relative;
+    // width: 100%;
+    background-color:#12121212;
 }
 
 .streaming_wrapper{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
 }

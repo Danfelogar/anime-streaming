@@ -1,91 +1,216 @@
-.drawer_wrapper{
-    background-color:$background;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    min-width: 43%;
-    overflow-y: scroll;
-}
-//primer bloque
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-.close_section{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+.navbar, .navbar-logo, .navbar-logo span{
+    font-family: 'Monoton', cursive;
+}
+
+//Component Button
+
+.btn{
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: $title;
+    cursor: pointer;
+    background-color: $primaryColor;
+}
+
+.btn:hover{
+    padding: 6px 18px;
+    transition:  all 0.3s ease-out;
+    background-color: transparent;
+    color: $title;
+    border-radius: 4px;
+    border: 2px  solid $primaryColor;
+}
+
+//Component DropDown
+
+.dropdown-menu {
+    background: red;
+    width: 200px;
+    position: absolute;
+    top: 80px;
+    list-style: none;
+    text-align: start;
+}
+
+.dropdown-menu li {
+    background: #1888ff;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #5cabff;
+}
+
+.dropdown-menu.clicked {
+    display: none;
+}
+
+.dropdown-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
     color:$text;
-    font-size: 25px;
+    padding: 16px;
 }
 
-//segundo bloque
+@media screen and (max-width: 960px) {
+    .fa-caret-down {
+    display: none;
+    }
+}
 
-.main_section{
+//Component  DrawerScreen
+
+.navbar {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.fa-firstdraft {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+    background-color: #1888ff;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+    color: #fff;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .NavbarItems {
+    position: relative;
+    }
+
+    .nav-menu {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    justify-content: start;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    }
+
+    .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    }
+
+    .nav-links:hover {
+    background-color: #1888ff;
+    border-radius: 0;
+    }
+
+    .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+    }
+
+    .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    }
+
+    .fa-times {
+    color: #fff;
+    font-size: 2rem;
+    }
+
+    .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    }
+
+    .nav-links-mobile:hover {
+    background: #fff;
+    color: #1888ff;
+    transition: 250ms;
+    }
+
+    button {
+    display: none;
+    }
 }
-
-.main_section h2{
-    color:$title;
-    font-size: 27px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.main_section h2 span{
-    border-bottom: 1.3px solid $text;
-}
-
-.main_section ul li{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 5px 0;
-    color:$title;
-}
-
-.main_section ul li h3{
-    color:$title;
-    font-size: 18px;
-    font-weight: 500;
-    padding-left: 4px;
-}
-
-//tercer bloque
-
-.genre_section{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.genre_section h2{
-    color:$title;
-    font-size: 27px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.genre_section h2 span{
-    border-bottom: 1.3px solid $text;
-}
-
-.genre_section ul li{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 5px 0;
-    color:$title;
-    font-size: 15px;
-}
-
-.genre_section ul li h3{
-    color:$title;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 10px;
-}
-
