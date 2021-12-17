@@ -1,8 +1,13 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const NavbarScreen = () => {
     return (
-        <div>
-            aqui debe de estar el search
-        </div>
+        <div className="search-toggle">
+		    <input type="text" placeholder="Search an anime"/>
+		    <i>
+                <FontAwesomeIcon icon={faSearch}/>
+            </i>
+	    </div>
     )
 }

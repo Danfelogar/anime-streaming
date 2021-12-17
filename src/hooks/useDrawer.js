@@ -12,7 +12,7 @@ export const useDrawer = () => {
     const [dropdown, setDropdown] = useState(false);
 
     const onMouseEnter = () => {
-        if (window.innerWidth < 960) {
+        if (window.innerWidth < 300) {
             setDropdown(false);
         } else {
             setDropdown(true);
@@ -20,7 +20,7 @@ export const useDrawer = () => {
     };
 
     const onMouseLeave = () => {
-        if (window.innerWidth < 960) {
+        if (window.innerWidth < 300) {
             setDropdown(false);
         } else {
             setDropdown(false);

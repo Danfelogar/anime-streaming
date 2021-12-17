@@ -1,0 +1,31 @@
+.search-toggle {
+    width: auto;
+    margin: 20px;
+    display: table;
+}
+.search-toggle input[type=text] {
+    position: relative;
+    padding: 15px 30px 15px 17px;
+    width: 48px;
+    height: 48px;
+    color: $background;
+    font-size: 17px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.5s ease;
+    background:$text;
+}
+.search-toggle input[type=text]:hover {
+    width: 180px;
+}
+.search-toggle input[type=text]:focus {
+	width: 300px;
+}
+.search-toggle i {
+    position: relative;
+    left: -33px;
+    top: 3px;
+    font-size: 20px;
+    color: $background;
+}

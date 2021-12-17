@@ -1,0 +1,14 @@
+.favorite_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.favorite_wrapper h3{
+    display: flex;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: $background;
+    font-weight: 900;
+    justify-content: flex-end;
+}

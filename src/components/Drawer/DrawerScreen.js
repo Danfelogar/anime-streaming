@@ -1,4 +1,4 @@
-import { faBars, faCrown, faFilm, faHeart, faIdCard, faPlay, faRunning, faSortDown, faTimesCircle, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCrown, faFilm, faHeart, faRunning, faSortDown, faTimesCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useDrawer } from "../../hooks/useDrawer";
@@ -16,7 +16,7 @@ export const DrawerScreen = () => {
         <>
             <nav className="navbar">
                 <Link to='/' className="navbar-logo">
-                    <FontAwesomeIcon icon={faFilm} />
+                    <FontAwesomeIcon style={{marginRight:"10px"}} icon={faFilm} />
                     <span>STREAM</span>NIMEX
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
@@ -25,41 +25,41 @@ export const DrawerScreen = () => {
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                            <FontAwesomeIcon icon={faRunning} />
+                            <FontAwesomeIcon style={{marginRight:"10px"}}  icon={faRunning} />
                             Coming Soon
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                            <FontAwesomeIcon icon={faHeart} />
+                        <Link to='/favoritesList' className="nav-links" onClick={closeMobileMenu}>
+                            <FontAwesomeIcon style={{marginRight:"10px", color:"#e63946"}}  icon={faHeart} />
                             Favorite Animes
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                            <FontAwesomeIcon icon={faCrown} />
+                            <FontAwesomeIcon style={{marginRight:"10px", color:"#e9c46a"}}  icon={faCrown} />
                             Most Popular
                         </Link>
                     </li>
                     <li className="nav-item"
-                                        onMouseEnter={onMouseEnter}
+                    onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                     >
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
                             Genre
-                            <FontAwesomeIcon icon={faSortDown} />
+                            <FontAwesomeIcon style={{marginLeft:"10px"}}  icon={faSortDown} />
                         </Link>
                         {dropdown && <Dropdown/>}
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                            <FontAwesomeIcon icon={faIdCard} />
+                            <FontAwesomeIcon style={{marginRight:"10px"}}  icon={faIdCard} />
                             Contact Me
                         </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         <Link to='/' className="nav-links-mobile" onClick={closeMobileMenu}>
-                            <FontAwesomeIcon icon={faUser} />
+                            <FontAwesomeIcon style={{marginRight:"10px"}}  icon={faUser} />
                             Sign Up
                         </Link>
                     </li>

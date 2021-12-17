@@ -1,0 +1,466 @@
+
+.detail_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px 30px 30px;
+    width: 100%;
+}
+
+//encabezado o primera parte
+
+.detail_main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 740px;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.picture img{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 97%;
+    border-radius: 39px;
+    margin-left: 50px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.text_title1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.text_title1 h2{
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: $background;
+    font-weight: 900;
+    text-align: start;
+}
+
+.text_title1 h3{
+    font-size: 22px;
+    letter-spacing: 0px;
+    color: $background;
+    font-weight: 500;
+    text-align: end;
+    justify-self: center;
+    transform: scale(1.2);
+}
+
+.text_title2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.text_title2 h2{
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: $primaryColor;
+    font-weight: 500;
+    text-align: start;
+}
+
+.text_title2 svg{
+    font-size: 42px;
+    transition: all 0.3s ease;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        color: #e63946;
+    }
+}
+
+.text_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.text_content h3{
+    font-size: 22px;
+    letter-spacing: 0.6px;
+    color: $background;
+    font-weight: 500;
+    text-align: start;
+}
+
+//avatars para personajes y elenco
+
+
+.text_character{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.text_characters h3{
+    font-size: 27px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    color: $primaryColor;
+    font-weight: 500;
+    text-align: start;
+}
+
+.text_staff h3{
+    font-size: 27px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    color: $primaryColor;
+    font-weight: 500;
+    text-align: start;
+}
+
+
+$avatar-size: 50px;
+
+.avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    // overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    background-color: #2c303a;
+    border: 2px solid #2c303a;
+
+    img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    }
+}
+
+.avatar-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &.rtl {
+    direction: rtl;
+
+    .avatar:hover:not(:last-of-type) {
+        transform: translate(10px);
+    }
+}
+
+    .avatar {
+        margin-left: -20px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            .tooltiptext {
+                visibility: visible;
+            }
+        }
+
+        &:hover:not(:last-of-type) {
+            transform: translate(-10px);
+        }
+    }
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: $background;
+        color: $text;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    .hidden-avatars {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3px;
+        margin-right: 23px;
+        background-color: #2c303a;
+        color: #fff;
+    }
+}
+
+// @media screen and (max-width: 960px) {
+
+//     .detail_main{
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//         height: 740px;
+//     }
+
+//     .picture {
+//         width: 100%;
+//     }
+
+//     .text{
+//         width: 100%;
+//     }
+
+// }
+
+//boton para el trailer
+
+.btn-trailer{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 20px;
+    &:hover{
+        color:$primaryColor;
+    }
+}
+
+// seccion de episodios
+
+.detail_episodes{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: 10px 0;
+}
+
+.detail_episodes_title{
+    font-size: 34px;
+    letter-spacing: 1px;
+    color: $background;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.cards_episodes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card_episode{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 15%;
+    padding: 5px;
+    background: transparent;
+    border: 3px solid $background;
+    margin: 25px;
+
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: $background;
+    font-weight: 300;
+
+    transition: all 0.3s ease;
+
+    &:hover{
+        transform: scale(1.1);
+        border: 3px solid $title;
+        background-color: $background;
+        cursor: pointer;
+        color: $title;
+    }
+}
+
+.card_episode img{
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    margin-right: 10px;
+}
+
+//seccion de las noticias
+
+.detail_new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.detail_new h3{
+    font-size: 34px;
+    letter-spacing: 1px;
+    color: $background;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.detail_new_deck{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.deck {
+	position: relative;
+	max-width: 500px;
+	width: 100%;
+	margin: 25px;
+}
+.card-new {
+	position: relative;
+	background-color: #30344c;
+	padding: 1em;
+	z-index: 5;
+	border-radius: 2px;
+	box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+	transition: 200ms ease-in-out;
+	+ {
+		.card-new {
+			margin-top: 1em;
+		}
+	}
+	&:hover {
+		z-index: 7;
+		transform: scale(1.05);
+		box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+	}
+	&:first-of-type {
+		margin-left: -3em;
+		margin-right: 3em;
+	}
+	&:nth-of-type(2) {
+		margin-left: 5em;
+		margin-right: -5em;
+		margin-top: -6em;
+	}
+	&:nth-of-type(3) {
+		margin-top: -2em;
+		margin-left: -1em;
+		margin-right: 1em;
+	}
+}
+.cardHeader {
+	display: grid;
+	grid-template-columns: 36px auto 100px;
+	align-items: center;
+	text-transform: uppercase;
+	.cardHeader_type {
+		color: #FFD433;
+		margin: 10px;
+	}
+	.cardHeader_account {
+		color: #C6E1ED;
+		font-size: .85em;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	.cardHeader_date {
+		margin: 10px;
+		color: #C6E1ED;
+		font-size: .85em;
+		font-weight: 600;
+		text-align: right;
+	}
+}
+.cardBody {
+	display: flex;
+	margin: 0 10px 10px;
+	.cardText {
+		margin: 0 10px 0 0;
+		white-space: pre-line;
+		color: #c0c3d7;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+	.cardStats {
+		font-size: .9em;
+		text-align: right;
+		.cardStats_stat {
+			display: inline-block;
+			white-space: nowrap;
+			+ {
+				.cardStats_stat {
+					margin-top: 5px;
+				}
+			}
+		}
+		.cardStats_stat.cardStats_stat-comments {
+			color: #ff9578;
+		}
+	}
+}
+@media (max-width: 705px) {
+	.deck {
+		margin: 4em auto;
+	}
+	.card-new {
+		&:first-of-type {
+			margin-left: -1em;
+			margin-right: 1em;
+		}
+		&:nth-of-type(2) {
+			margin-left: 1em;
+			margin-right: -1em;
+			margin-top: 1em;
+		}
+		&:nth-of-type(3) {
+			margin-left: -1em;
+			margin-right: 1em;
+			margin-top: 1em;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -1em;
+				display: block;
+				border-bottom: 5px solid rgba(192, 57, 43, 0.6);
+			}
+		}
+	}
+}
+@media (max-width: 550px) {
+	.deck {
+		&:before {
+			left: 1.5em;
+		}
+	}
+	.card-new {
+		&:first-of-type {
+			margin: 0;
+		}
+		&:nth-of-type(2) {
+			margin: 1em 0 0;
+		}
+		&:nth-of-type(3) {
+			margin: 1em 0 0;
+		}
+	}
+}

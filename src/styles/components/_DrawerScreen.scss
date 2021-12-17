@@ -35,15 +35,16 @@
     top: 80px;
     list-style: none;
     text-align: start;
+    z-index: 1;
 }
 
 .dropdown-menu li {
-    background: #1888ff;
+    background: $primaryColor;
     cursor: pointer;
 }
 
 .dropdown-menu li:hover {
-    background: #5cabff;
+    background: #77529c;
 }
 
 .dropdown-menu.clicked {
@@ -63,6 +64,27 @@
     .fa-caret-down {
     display: none;
     }
+    .dropdown-menu {
+        font-size: 15px;
+        background: transparent;
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        top: 225px;
+        left: 0px;
+        list-style: none;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .dropdown-menu li{
+        display: flex;
+        flex-direction: row;
+        width: 25%;
+
+    }
+
 }
 
 //Component  DrawerScreen
@@ -74,15 +96,23 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    padding: 0 10px;
 }
 
 .navbar-logo {
-    color: #fff;
+    display: flex;
+    align-items: center;
+    color: $primaryColor;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.navbar-logo span {
+    color: $title;
 }
 
 .fa-firstdraft {
@@ -108,19 +138,20 @@
 }
 
 .nav-links {
-    color: white;
+    color: $title;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
 .nav-links:hover {
-    background-color: #1888ff;
+    
+    background-color: $primaryColor;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-    color: #fff;
+    color: $title;
 }
 
 .nav-links-mobile {
@@ -129,6 +160,7 @@
 
 .menu-icon {
     display: none;
+    color: $title;
 }
 
 @media screen and (max-width: 960px) {
@@ -141,7 +173,7 @@
     flex-direction: column;
     justify-content: start;
     width: 100%;
-    height: 90vh;
+    height: 91.3vh;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -165,7 +197,7 @@
     }
 
     .nav-links:hover {
-    background-color: #1888ff;
+    background-color: $primaryColor;
     border-radius: 0;
     }
 
@@ -198,15 +230,15 @@
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: #1888ff;
+    background: $primaryColor;
     text-decoration: none;
-    color: #fff;
+    color: $title;
     font-size: 1.5rem;
     }
 
     .nav-links-mobile:hover {
-    background: #fff;
-    color: #1888ff;
+    background: $title;
+    color: $primaryColor;
     transition: 250ms;
     }
 

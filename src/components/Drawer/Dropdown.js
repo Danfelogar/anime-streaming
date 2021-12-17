@@ -1,4 +1,5 @@
-
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Link } from "react-router-dom";
 import { useDrawer } from "../../hooks/useDrawer";
@@ -21,6 +22,7 @@ export const Dropdown = () => {
                             className="dropdown-link"
                             onClick={closeMobileMenu}
                             >
+                                <FontAwesomeIcon style={{marginRight:"10px"}} icon={faPlay} />
                                 {genre.name}
                             </Link>
                             </li>

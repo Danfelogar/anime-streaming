@@ -1,0 +1,23 @@
+
+.anime_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.anime_wrapper h3{
+    display: flex;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: $background;
+    font-weight: 900;
+    justify-content: flex-end;
+}
+
+.container_card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    justify-content: center;
+}
