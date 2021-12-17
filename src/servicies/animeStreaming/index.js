@@ -3,10 +3,10 @@ import axios from './index';
 export const animeStreamingServices = () =>{
 
     //pantalla principal "animes que estan en el top"
-    const getTop =()=>{
+    const getTop =(tier)=>{
         return axios({
             method: 'GET',
-            url: '/top/anime/1/upcoming',
+            url: `/top/anime/1/${tier}`,
         })
     }
 
