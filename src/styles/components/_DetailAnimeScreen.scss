@@ -104,6 +104,12 @@
     color: $background;
     font-weight: 500;
     text-align: start;
+
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+	-webkit-box-orient: vertical; /* number of lines to show */
 }
 
 //avatars para personajes y elenco
@@ -387,6 +393,12 @@ $avatar-size: 50px;
 		font-size: .85em;
 		font-weight: 600;
 		text-align: right;
+
+        overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+	    -webkit-box-orient: vertical; /* number of lines to show */
 	}
 }
 .cardBody {

@@ -62,6 +62,36 @@
     transition: all 0.5s ease;
 }
 
+.card .score {
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    padding: 3px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    background:$primaryColor;
+    color: $title;
+    border-radius: 5px;
+    transform: translate(-160px, 0);
+    transition: all 0.5s ease;
+}
+
+.card .rank {
+    position: absolute;
+    left: 10px;
+    top: 105px;
+    padding: 3px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    background:#8b2463;
+    color: $title;
+    border-radius: 5px;
+    transform: translate(-160px, 0);
+    transition: all 0.5s ease;
+}
+
 .card .catagory {
     position: absolute;
     left: 10px;
@@ -109,6 +139,8 @@
 }
 
 .card:hover .views,
-.card:hover .catagory {
+.card:hover .catagory,
+.card:hover .rank,
+.card:hover .score {
     transform: translate(0);
 }

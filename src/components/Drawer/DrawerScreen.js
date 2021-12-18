@@ -10,12 +10,14 @@ import { Dropdown } from "./Dropdown";
 export const DrawerScreen = () => {
 
     const { click, handleClick,closeMobileMenu,dropdown,onMouseEnter,
-        onMouseLeave, } = useDrawer();
+        onMouseLeave,handleAnimeList } = useDrawer();
 
     return (
         <>
             <nav className="navbar">
-                <Link to='/' className="navbar-logo">
+                <Link
+                onClick={()=>handleAnimeList("tv","TV")}
+                to='/' className="navbar-logo">
                     <FontAwesomeIcon style={{marginRight:"10px"}} icon={faFilm} />
                     <span>STREAM</span>NIMEX
                 </Link>
@@ -23,7 +25,9 @@ export const DrawerScreen = () => {
                     <FontAwesomeIcon icon={click ? faTimesCircle : faBars} />
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className="nav-item">
+                    <li
+                    onClick={()=>handleAnimeList("upcoming","Upcoming")}
+                    className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
                             <FontAwesomeIcon style={{marginRight:"10px"}}  icon={faRunning} />
                             Coming Soon
@@ -35,7 +39,9 @@ export const DrawerScreen = () => {
                             Favorite Animes
                         </Link>
                     </li>
-                    <li className="nav-item">
+                    <li
+                    onClick={()=>handleAnimeList("airing","Most Popular")}
+                    className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
                             <FontAwesomeIcon style={{marginRight:"10px", color:"#e9c46a"}}  icon={faCrown} />
                             Most Popular
@@ -45,10 +51,10 @@ export const DrawerScreen = () => {
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                     >
-                        <Link to='/' className="nav-links" onClick={closeMobileMenu}>
+                        <div className="nav-links" onClick={closeMobileMenu}>
                             Genre
                             <FontAwesomeIcon style={{marginLeft:"10px"}}  icon={faSortDown} />
-                        </Link>
+                        </div>
                         {dropdown && <Dropdown/>}
                     </li>
                     {/* <li className="nav-item">

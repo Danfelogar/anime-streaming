@@ -1,7 +1,21 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
+
+import { animeActions } from "../actions/anime";
 
 
 export const useDrawer = () => {
+
+    //consumo de servicios
+
+    const dispatch = useDispatch();
+
+    const { animeList, nameList } = useSelector(state => state.animeStreaming);
+
+    const { actGetTop, actGetGenre, actGetNameList } = animeActions();
+
+
+    //funcionalidades del componente drawer
 
     const [click, setClick] = useState(false);
 
@@ -27,6 +41,25 @@ export const useDrawer = () => {
         }
     };
 
+    const handleAnimeList = (tier,name)=>{
+        dispatch(actGetTop(tier));
+        dispatch(actGetNameList(name));
+    };
+
+    useEffect(() => {
+        if(animeList.length === 0){
+            dispatch(actGetNameList("TV"));
+            dispatch(actGetTop("tv"));
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const handleAnimeByGenre = (type,name)=>{
+        dispatch(actGetGenre(type));
+        dispatch(actGetNameList(name));
+    }
+
+
     return {
         click,
         handleClick,
@@ -34,5 +67,11 @@ export const useDrawer = () => {
         dropdown,
         onMouseEnter,
         onMouseLeave,
+
+        animeList,
+        nameList,
+
+        handleAnimeList,
+        handleAnimeByGenre,
     }
 }

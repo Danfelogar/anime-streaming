@@ -8,7 +8,7 @@ import { arrayOfGenre } from "./arrayOfgenre";
 
 export const Dropdown = () => {
 
-    const { click, handleClick,closeMobileMenu } = useDrawer();
+    const { click, handleClick,closeMobileMenu,handleAnimeByGenre, } = useDrawer();
 
     return (
         <>
@@ -16,15 +16,17 @@ export const Dropdown = () => {
                 {
                     arrayOfGenre.map((genre,idx)=>{
                         return(
-                            <li key={idx}>
-                            <Link
-                            to="#"
-                            className="dropdown-link"
-                            onClick={closeMobileMenu}
-                            >
-                                <FontAwesomeIcon style={{marginRight:"10px"}} icon={faPlay} />
-                                {genre.name}
-                            </Link>
+                            <li
+                            onClick={()=>handleAnimeByGenre(genre.number,genre.name)}
+                            key={idx}>
+                                <Link
+                                to="/"
+                                className="dropdown-link"
+                                onClick={closeMobileMenu}
+                                >
+                                    <FontAwesomeIcon style={{marginRight:"10px"}} icon={faPlay} />
+                                    {genre.name}
+                                </Link>
                             </li>
                         )
                     })

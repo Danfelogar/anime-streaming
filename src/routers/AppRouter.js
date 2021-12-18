@@ -27,7 +27,7 @@ export const AppRouter = () => {
                             <Route exact path="/favoritesList">
                                 <FavoritesAnime/>
                             </Route>
-                            <Route path="/id" >
+                            <Route path="/:id" >
                                 <DetailAnimeScreen/>
                             </Route>
                             <Redirect to="/" />
