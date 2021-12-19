@@ -51,7 +51,7 @@
     letter-spacing: 1px;
     color: $background;
     font-weight: 900;
-    text-align: start;
+    text-align: flex-start;
 }
 
 .text_title1 h3{
@@ -77,7 +77,7 @@
     letter-spacing: 1px;
     color: $primaryColor;
     font-weight: 500;
-    text-align: start;
+    text-align:flex-start;
 }
 
 .text_title2 svg{
@@ -103,7 +103,7 @@
     letter-spacing: 0.6px;
     color: $background;
     font-weight: 500;
-    text-align: start;
+    text-align: flex-start;
 
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -128,7 +128,7 @@
     letter-spacing: 1px;
     color: $primaryColor;
     font-weight: 500;
-    text-align: start;
+    text-align: flex-start;
 }
 
 .text_staff h3{
@@ -137,7 +137,7 @@
     letter-spacing: 1px;
     color: $primaryColor;
     font-weight: 500;
-    text-align: start;
+    text-align: flex-start;
 }
 
 
