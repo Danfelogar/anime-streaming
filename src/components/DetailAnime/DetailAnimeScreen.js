@@ -12,7 +12,7 @@ export const DetailAnimeScreen = () => {
         <div className="detail_wrapper">
             <div className="detail_main">
                 <div className="picture">
-                    <img src={picture[0].large} alt="anime cover"/>
+                    <img src={picture[0].large ? picture[0].large : `https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg` } alt="anime cover"/>
                 </div>
                 <div className="text">
                     <div className="text_title1">
