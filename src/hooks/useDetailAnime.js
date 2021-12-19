@@ -13,12 +13,16 @@ export const useDetailAnime = () => {
 
     const dispatch = useDispatch();
 
-    const { nameAndDate,charactersAndStaff,picture,videos,episodes,news,moreInfo, } = useSelector(state => state.animeStreaming);
+    const { nameAndDate,charactersAndStaff,picture,videos,episodes,news,moreInfo } = useSelector(state => state.animeStreaming);
 
-    const { actGetNameAndDate, actGetCharactersStaff, actGetPictures, actGetVideos, actGetEpisodes, actGetNews, actGetMoreInfo,} = animeActions();
+    const { favoriteList } = useSelector(state => state.favoriteList);
+
+    const { actGetNameAndDate, actGetCharactersStaff, actGetPictures, actGetVideos, actGetEpisodes, actGetNews, actGetMoreInfo,actgetClearAllDetail, actGetAddAnimeFavorite, actGetRemoveAnimeFavorite,} = animeActions();
 
     const handleNameAndDate = (name,date,id)=>{
-        dispatch(actGetNameAndDate(name,date));
+
+        dispatch(actgetClearAllDetail())
+        dispatch(actGetNameAndDate(name,date,id));
         dispatch(actGetCharactersStaff(id));
         dispatch(actGetPictures(id));
         dispatch(actGetVideos(id));
@@ -32,6 +36,20 @@ export const useDetailAnime = () => {
         //toca esto porque me limitan a 2 peticiones por seg el db
     }
 
+    const handleFavoriteList = (e,id,img,name,date)=>{
+        e.preventDefault();
+
+        const evaluation = favoriteList.find(favorite => favorite.id === id);
+        console.log(evaluation)
+        if(evaluation){
+            dispatch(actGetRemoveAnimeFavorite(id));
+        } else {
+            dispatch(actGetAddAnimeFavorite(id,img,name,date));
+        }
+    }
+
+    const searchOnList = favoriteList.find(favorite => favorite.id === nameAndDate.id);
+
     return {
         nameAndDate,
         charactersAndStaff,
@@ -40,7 +58,10 @@ export const useDetailAnime = () => {
         episodes,
         news,
         moreInfo,
+        favoriteList,
 
-        handleNameAndDate
+        handleNameAndDate,
+        handleFavoriteList,
+        searchOnList,
     }
 }

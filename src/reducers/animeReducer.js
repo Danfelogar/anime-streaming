@@ -70,6 +70,17 @@ export const animeReducer = (state=initialState, action) => {
                 ...state,
                 nameList: action.payload
             }
+        case types.getClearAllDetail:
+            return{
+                ...state,
+                nameAndDate: initialState.nameAndDate,
+                charactersAndStaff: initialState.charactersAndStaff,
+                picture: initialState.picture,
+                videos: initialState.videos,
+                episodes: initialState.episodes,
+                news: initialState.news,
+                moreInfo: initialState.moreInfo,
+            }
         default:
             return state;
     }

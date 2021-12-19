@@ -10,4 +10,7 @@ export const types ={
     getNameAndDate: '[animeStreaming] get name of the anime and date by card',
     getSearchAnime: '[animeStreaming] show list with anime by names',
     getTitleOfListAnime: '[animeStreaming] show mame list',
+    getClearAllDetail: '[animeStreaming] clear all boxes containing the anime details',
+    getAddAnimeFavorite: '[animeStreaming] add anime at favorite list',
+    getRemoveAnimeFavorite: '[animeStreaming] remove anime at favorite list',
 }

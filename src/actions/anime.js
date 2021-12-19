@@ -8,7 +8,6 @@ const actGetTop = (tier)=>async(dispatch)=>{
     try {
         const  res = await getTop(tier);
         const { top } = res.data;
-        console.log(top)
         dispatch({
             type: types.getListTopAnimes,
             payload:top
@@ -130,30 +129,50 @@ const actGetSearchAnimeByName = (animeName)=>async(dispatch)=>{
     }
 }
 
-const actGetNameAndDate = (name,date)=>(dispatch)=>{
-    try {
-        dispatch({
-            type: types.getNameAndDate,
-            payload:{
-                name,
-                date,
-            }
-        });
-    } catch (e) {
-        console.log(e)
-    }
+const actGetNameAndDate = (name,date,id)=>(dispatch)=>{
+    dispatch({
+        type: types.getNameAndDate,
+        payload:{
+            name,
+            date,
+            id,
+        }
+    });
 }
 const actGetNameList = (name)=>(dispatch)=>{
-    try {
-        dispatch({
-            type: types.getTitleOfListAnime,
-            payload: name
-        });
-    } catch (e) {
-        console.log(e)
-    }
+    dispatch({
+        type: types.getTitleOfListAnime,
+        payload: name
+    });
 }
 
+const actgetClearAllDetail = ()=>(dispatch)=>{
+    dispatch({
+        type: types.getClearAllDetail,
+    });
+}
+
+const actGetAddAnimeFavorite = (id,img,name,date)=>(dispatch)=>{
+
+    const anime ={
+        id: id,
+        img: img,
+        name: name,
+        date: date,
+    }
+
+    dispatch({
+        type: types.getAddAnimeFavorite,
+        payload: anime
+    });
+}
+
+const actGetRemoveAnimeFavorite = (id)=>(dispatch)=>{
+    dispatch({
+        type: types.getRemoveAnimeFavorite,
+        payload: id
+    });
+}
 
 export const animeActions = ()=>{
     return{
@@ -167,6 +186,9 @@ export const animeActions = ()=>{
         actGetMoreInfo,
         actGetSearchAnimeByName,
         actGetNameAndDate,
-        actGetNameList
+        actGetNameList,
+        actgetClearAllDetail,
+        actGetAddAnimeFavorite,
+        actGetRemoveAnimeFavorite,
     }
 }

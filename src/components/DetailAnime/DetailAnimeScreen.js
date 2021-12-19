@@ -1,11 +1,12 @@
 import { faComments, faHeart, faNewspaper } from "@fortawesome/free-regular-svg-icons";
+import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useDetailAnime } from "../../hooks/useDetailAnime";
 
 export const DetailAnimeScreen = () => {
 
-    const { nameAndDate, charactersAndStaff, picture, videos, episodes, news, moreInfo, } = useDetailAnime();
+    const { nameAndDate, charactersAndStaff, picture, videos, episodes, news, moreInfo,handleFavoriteList, searchOnList, } = useDetailAnime();
 
     return (
         <div className="detail_wrapper">
@@ -20,7 +21,10 @@ export const DetailAnimeScreen = () => {
                     </div>
                     <div className="text_title2">
                         <h2>More information</h2>
-                        <FontAwesomeIcon icon={faHeart}/>
+                        <FontAwesomeIcon
+                        style={ searchOnList && {color:"#e63946"}}
+                        onClick={(e)=>handleFavoriteList(e,nameAndDate.id,picture[0].large,nameAndDate.name,nameAndDate.date)}
+                        icon={ searchOnList ? faHeartbeat : faHeart}/>
                     </div>
                     <div className="text_content">
                         <h3>{ moreInfo  ? moreInfo : `We are sorry but at the moment we do not have information about this anime`}</h3>
