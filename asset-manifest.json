@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/anime-streaming/static/css/main.2d887cb8.chunk.css",
+    "main.css": "/anime-streaming/static/css/main.96d1f68a.chunk.css",
     "main.js": "/anime-streaming/static/js/main.92cace4e.chunk.js",
     "main.js.map": "/anime-streaming/static/js/main.92cace4e.chunk.js.map",
     "runtime-main.js": "/anime-streaming/static/js/runtime-main.b03df5b4.js",
@@ -8,13 +8,13 @@
     "static/js/2.4e596986.chunk.js": "/anime-streaming/static/js/2.4e596986.chunk.js",
     "static/js/2.4e596986.chunk.js.map": "/anime-streaming/static/js/2.4e596986.chunk.js.map",
     "index.html": "/anime-streaming/index.html",
-    "static/css/main.2d887cb8.chunk.css.map": "/anime-streaming/static/css/main.2d887cb8.chunk.css.map",
+    "static/css/main.96d1f68a.chunk.css.map": "/anime-streaming/static/css/main.96d1f68a.chunk.css.map",
     "static/js/2.4e596986.chunk.js.LICENSE.txt": "/anime-streaming/static/js/2.4e596986.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b03df5b4.js",
     "static/js/2.4e596986.chunk.js",
-    "static/css/main.2d887cb8.chunk.css",
+    "static/css/main.96d1f68a.chunk.css",
     "static/js/main.92cace4e.chunk.js"
   ]
 }
