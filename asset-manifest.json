@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/anime-streaming/static/css/main.2d887cb8.chunk.css",
-    "main.js": "/anime-streaming/static/js/main.31df75bf.chunk.js",
-    "main.js.map": "/anime-streaming/static/js/main.31df75bf.chunk.js.map",
+    "main.js": "/anime-streaming/static/js/main.92cace4e.chunk.js",
+    "main.js.map": "/anime-streaming/static/js/main.92cace4e.chunk.js.map",
     "runtime-main.js": "/anime-streaming/static/js/runtime-main.b03df5b4.js",
     "runtime-main.js.map": "/anime-streaming/static/js/runtime-main.b03df5b4.js.map",
     "static/js/2.4e596986.chunk.js": "/anime-streaming/static/js/2.4e596986.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.b03df5b4.js",
     "static/js/2.4e596986.chunk.js",
     "static/css/main.2d887cb8.chunk.css",
-    "static/js/main.31df75bf.chunk.js"
+    "static/js/main.92cace4e.chunk.js"
   ]
 }
