@@ -1,4 +1,4 @@
-# Mi-diario-de-finanzas
+# Anime-streaming
 
 https://danfelogar.github.io/anime-streaming/
 
