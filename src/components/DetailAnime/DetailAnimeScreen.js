@@ -45,7 +45,7 @@ export const DetailAnimeScreen = () => {
                                             )
                                         })
                                     )
-                                    :(<div className="warning_text">soy fraca</div>)
+                                    :(<div className="warning_text">Right now we don't have character to show</div>)
                                 }
                             </div>
                         </div>
@@ -64,7 +64,7 @@ export const DetailAnimeScreen = () => {
 
                                             )
                                         })
-                                    :(<div className="warning_text">soy fraca</div>)
+                                    :(<div className="warning_text">Right now we don't have staff to show</div>)
                                 }
                             </div>
                         </div>
@@ -94,7 +94,7 @@ export const DetailAnimeScreen = () => {
                                 )
                             })
                         )
-                        :(<div className="warning_text">soy fraca</div>)
+                        :(<div className="warning_text">Right now we don't have episodes to show</div>)
                     }
                 </div>
             </div>
@@ -130,7 +130,7 @@ export const DetailAnimeScreen = () => {
                                 )
                             })
                         )
-                        :(<div className="warning_text">soy fraca</div>)
+                        :(<div className="warning_text">Right now we don't have news to show</div>)
                     }
                 </div>
             </div>
